@@ -34,9 +34,9 @@ def get_and_save_kline_data(symbol, interval, date, destination):
       # Write the data to the CSV file
       writer.writerows(kline_data)
 
-# Example usage:
+""" # Example usage:
 symbol = "RAYUSDT"
 interval = "1s"
 date = "2022-12-27"
 destination = f"data/{symbol}/{interval}"
-get_and_save_kline_data(symbol, interval, date, destination)
+get_and_save_kline_data(symbol, interval, date, destination) """
