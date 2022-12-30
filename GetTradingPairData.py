@@ -12,6 +12,7 @@ def get_and_save_kline_data_range(symbol, interval, start_date, end_date, destin
     # Get the kline data for the current date
     get_and_save_kline_data(symbol, interval, current_date.strftime("%Y-%m-%d"), destination)
 
+    print(f"Queried: {current_date}")
     # Check the number of days in the current month
     month = current_date.month
     year = current_date.year
@@ -35,9 +36,10 @@ def get_and_save_kline_data_range(symbol, interval, start_date, end_date, destin
     # Check if we have reached the
 
 # Example usage:
-symbol = "BTCUSDT"
+symbol = "SOLUSDT"
 interval = "1s"
-start_date = "2022-12-01"
-end_date = "2022-12-03"
-destination = "data/BTCUSDT"
+start_date = "2020-10-14"
+end_date = "2020-10-26"
+#destination = f"data/{symbol}"
+destination = f"data/soltwo"
 get_and_save_kline_data_range(symbol, interval, start_date, end_date, destination)
