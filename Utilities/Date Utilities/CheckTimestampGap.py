@@ -25,12 +25,11 @@ def check_timestamps(filename):
 
             if float(ts4) - float(ts3) != float(300000):
                 print(
-                    f"Timestamps {unix_ms_to_iso_gmt(int(ts3))} and {unix_ms_to_iso_gmt(int(ts4))} are not 5 minutes apart. {float(ts4) - float(ts3)} Row: {i}")
-            else:
-                test = 0
+                    # f"Timestamps {unix_ms_to_iso_gmt(int(ts3))} and {unix_ms_to_iso_gmt(int(ts4))} are not 5 minutes apart. {float(ts4) - float(ts3)} Row: {i}")
+                    f"File: {ts1}. Timestamps {ts3} and {ts4} are not 5 minutes apart. {float(ts4) - float(ts3)} Row: {i}")
 
 
-folder = "./data/BTCUSDT/Test"
+folder = "./data/BTCUSDT/5m"
 for file in os.listdir(folder):
     if file.endswith(".csv"):
         check_timestamps(os.path.join(folder, file))
