@@ -16,6 +16,6 @@ def count_rows(folder_path):
     return row_counts
 
 
-folder = "./data/BTCUSDT/5m"
+folder = "./data/SOLUSDT/5m"
 
 count_rows(folder)

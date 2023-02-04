@@ -29,7 +29,7 @@ def check_timestamps(filename):
                     f"File: {ts1}. Timestamps {ts3} and {ts4} are not 5 minutes apart. {float(ts4) - float(ts3)} Row: {i}")
 
 
-folder = "./data/BTCUSDT/5m"
+folder = "./data/SOLUSDT/5m"
 for file in os.listdir(folder):
     if file.endswith(".csv"):
         check_timestamps(os.path.join(folder, file))

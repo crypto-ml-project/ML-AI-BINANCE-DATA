@@ -61,9 +61,9 @@ def get_and_save_kline_data_range(symbol, interval, start_date, end_date, save_p
 
 
 # Example usage:
-symbol = "BTCUSDT"
+symbol = "SOLUSDT"
 interval = "5m"
-start_date = "2022-12"
+start_date = "2023-01"
 end_date = "2023-01"
 save_path = f"./data/{symbol}/{interval}"
 

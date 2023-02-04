@@ -31,6 +31,6 @@ def modify_csv_files(folder, id):
 
 
 # Example usage:
-folder = "./data/BTCUSDT/5m"
-id = 1
+folder = "./data/SOLUSDT/5m"
+id = 7
 modify_csv_files(folder, id)
