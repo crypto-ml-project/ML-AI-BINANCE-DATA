@@ -1,4 +1,5 @@
 
+import configparser
 import sys
 import datetime
 import requests
@@ -60,11 +61,13 @@ def get_and_save_kline_data_range(symbol, interval, start_date, end_date, save_p
         print(f"Queried: {current_date}")
 
 
+config = configparser.ConfigParser()
+config.read(r'database.ini')
 # Example usage:
-symbol = "SOLUSDT"
+symbol = config['postgresql']['currencySymbol']
 interval = "5m"
-start_date = "2023-01"
-end_date = "2023-01"
+start_date = "2020-10"
+end_date = "2023-02"
 save_path = f"./data/{symbol}/{interval}"
 
 get_and_save_kline_data_range(

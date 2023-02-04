@@ -1,3 +1,4 @@
+import configparser
 import csv
 import os
 
@@ -16,6 +17,11 @@ def count_rows(folder_path):
     return row_counts
 
 
-folder = "./data/SOLUSDT/5m"
+config = configparser.ConfigParser()
+config.read(r'database.ini')
+# Example usage:
+symbol = config['postgresql']['currencySymbol']
+
+folder = f"./data/{symbol}/5m"
 
 count_rows(folder)

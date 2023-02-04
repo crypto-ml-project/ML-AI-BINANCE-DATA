@@ -67,12 +67,17 @@ def upload_csvs_to_db(folder_path, host, port, database, user, password, table_n
         print("Unable to connect to the database.")
 
 
+config = configparser.ConfigParser()
+config.read(r'database.ini')
+# Example usage:
+symbol = config['postgresql']['currencySymbol']
+
 upload_csvs_to_db(
-    "./data/SOLUSDT/5m",
+    f"./data/{symbol}/5m",
     config['postgresql']['host'],
     config['postgresql']['port'],
     config['postgresql']['database'],
     config['postgresql']['user'],
     config['postgresql']['password'],
-    "historic_klines_solana_5min_interval"
+    "historic_klines_optimism_5min_interval"
 )

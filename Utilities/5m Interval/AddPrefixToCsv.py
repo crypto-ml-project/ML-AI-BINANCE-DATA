@@ -1,3 +1,4 @@
+import configparser
 import os
 import csv
 
@@ -27,10 +28,16 @@ def modify_csv_files(folder, id):
             # Open the file in write mode
             with open(os.path.join(folder, filename), 'w') as csvfile:
                 # Write the modified rows back to the file
+
                 csvfile.writelines(rows)
 
 
+config = configparser.ConfigParser()
+config.read(r'database.ini')
 # Example usage:
-folder = "./data/SOLUSDT/5m"
-id = 7
+symbol = config['postgresql']['currencySymbol']
+
+# Example usage:
+folder = f"./data/{symbol}/5m"
+id = 3
 modify_csv_files(folder, id)
